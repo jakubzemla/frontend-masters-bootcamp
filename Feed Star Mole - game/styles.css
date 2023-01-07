@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #d2ffa5;
+    cursor: url("./images/cursor.png"), default;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80vw;
+    height: 100vh;
+    background-image: url(./images/background.png);
+    background-size: cover;
+    padding-top: 1rem;
+}
+
+.worm-box {
+    width: 0%;
+    overflow: hidden;
+}
+
+.worm-box img {
+    padding: 0.5rem;
+    max-width: 80vw;;
+}
+
+.holes {
+    margin: 0 auto;
+    width: 90%;
+    height: 80%;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+
+.hole {
+    width: 8rem;
+    height: 8rem;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hole img {
+    display: none;
+    max-width: 120%;
+    max-height: 120%;
+}
+
+.feeding:hover {
+    cursor: url('./images/cursor-worm.png'), default;
+}
+
+
+#winner {
+    display: none;
+    margin: 0 auto;
+    height: 80%;
+}
+
+
+@media all and (max-width: 810px) {
+    .hole {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .hole {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media all and (max-width: 540px) {
+    .hole {
+        width: 4rem;
+        height: 4rem;
+    }
+}
